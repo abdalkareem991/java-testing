@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: abd.mavenproject1.LibraryManagementSystemIT
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.055 s <<< FAILURE! -- in abd.mavenproject1.LibraryManagementSystemIT
+abd.mavenproject1.LibraryManagementSystemIT.testBorrowUnavailableBook -- Time elapsed: 0.028 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "book" is null
+	at abd.mavenproject1.LibraryManagementSystemIT.testBorrowUnavailableBook(LibraryManagementSystemIT.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+abd.mavenproject1.LibraryManagementSystemIT.testAddBookAndSearch -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not supported yet.
+	at abd.mavenproject1.LibraryManagementSystemIT.assertNotNull(LibraryManagementSystemIT.java:81)
+	at abd.mavenproject1.LibraryManagementSystemIT.testAddBookAndSearch(LibraryManagementSystemIT.java:34)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+abd.mavenproject1.LibraryManagementSystemIT.testBorrowBookSuccess -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "book" is null
+	at abd.mavenproject1.LibraryManagementSystemIT.testBorrowBookSuccess(LibraryManagementSystemIT.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

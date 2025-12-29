@@ -1,0 +1,20 @@
+# Created at 2025-12-20T21:37:32.713
+org.apache.maven.surefire.api.util.SurefireReflectionException: java.lang.NoSuchMethodError: 'org.junit.platform.engine.support.store.NamespacedHierarchicalStore$CloseAction org.junit.platform.engine.support.store.NamespacedHierarchicalStore$CloseAction.closeAutoCloseables()'
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:129)
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeGetter(ReflectionUtils.java:62)
+	at org.apache.maven.surefire.junitplatform.LauncherSessionFactory.lambda$static$0(LauncherSessionFactory.java:30)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:129)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.lang.NoSuchMethodError: 'org.junit.platform.engine.support.store.NamespacedHierarchicalStore$CloseAction org.junit.platform.engine.support.store.NamespacedHierarchicalStore$CloseAction.closeAutoCloseables()'
+	at org.junit.platform.launcher.core.DefaultLauncherSession.<init>(DefaultLauncherSession.java:49)
+	at org.junit.platform.launcher.core.LauncherFactory.openSession(LauncherFactory.java:100)
+	at org.junit.platform.launcher.core.LauncherFactory.openSession(LauncherFactory.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125)
+	... 7 more
+
+

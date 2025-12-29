@@ -91,6 +91,7 @@ public class LibraryManagementSystem {
                 case 4: returnBook(); break;
                 case 5: promptAddMember(); break;
                 case 6: System.out.println("Thank you for using the Library System. Goodbye!"); break;
+                case 7: System.out.println("abdalkareem"); break;
                 default: System.out.println("Invalid option.");
             }
         }
@@ -104,6 +105,7 @@ public class LibraryManagementSystem {
         System.out.println("4. Return a Book");
         System.out.println("5. Add New Member");
         System.out.println("6. Exit");
+        System.out.println("7. print abdalkareem");
         System.out.print("Please enter your choice: ");
     }
 
