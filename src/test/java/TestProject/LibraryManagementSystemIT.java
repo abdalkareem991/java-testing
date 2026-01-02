@@ -92,4 +92,32 @@ public class LibraryManagementSystemIT {
         m.setAccessible(true);
         return m.invoke(null, bookNum);
     }
+    @Test
+    void testIntegrationMemberBorrowBook() throws Exception {
+        
+        invokeAddBook("Software Testing", "Naik", "BK-999");
+        invokeAddMember("Abdalkareem", "M-5161");
+
+        
+        Object book = invokeFindBook("BK-999");
+       
+        Object member = invokeFindMember("M-5161");
+
+        assertNotNull(book, "Book should exist");
+        assertNotNull(member, "Member should exist");
+
+        Method borrowMethod = member.getClass().getMethod("borrowBook", LibraryManagementSystem.Book.class);
+        borrowMethod.invoke(member, book);
+
+        Method getBorrowedBooks = member.getClass().getMethod("getBorrowedBooks");
+        List<?> borrowedList = (List<?>) getBorrowedBooks.invoke(member);
+
+        assertTrue(borrowedList.contains(book), "The book must be in the member's borrowed list");
+    }
+
+        private Object invokeFindMember(String memberId) throws Exception {
+        Method m = LibraryManagementSystem.class.getDeclaredMethod("findMemberById", String.class);
+        m.setAccessible(true);
+        return m.invoke(null, memberId);
+    }
 }
